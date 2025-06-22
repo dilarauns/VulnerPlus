@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  falco:
+    image: falcosecurity/falco:latest
+    privileged: true
+    command: falco -A 
+    volumes:
+      - /var/run/docker.sock:/host/var/run/docker.sock
+      - /proc:/host/proc:ro
+      - /etc:/host/etc:ro
+      - ./falco:/etc/falco
+    tty: true
+    stdin_open: true
+    restart: "no"

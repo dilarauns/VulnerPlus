@@ -1,0 +1,16 @@
+# Your custom rules!
+- rule: Write to /tmp/text.txt
+  desc: Bir kullanıcı /tmp/text.txt dosyasına yazdığında kritik uyarı ver
+  condition: open_write and fd.name = "/tmp/text.txt"
+  output: "CRITICAL: /tmp/text.txt dosyasına yazıldı (user=%user.name file=%fd.name)"
+  priority: CRITICAL
+  tags: [filesystem, tmp]
+
+
+- rule: Read /etc/hostname
+  desc: Bir kullanıcı /etc/hostname dosyasını okuduğunda uyarı ver
+  condition: open_read and fd.name = "/etc/hostname"
+  output: "WARNING: /etc/hostname dosyası okundu (user=%user.name file=%fd.name)"
+  priority: WARNING
+  tags: [filesystem, etc, read]
+

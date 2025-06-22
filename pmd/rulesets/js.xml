@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<ruleset name="WebBasedECMAScriptRules"
+         xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 
+                             https://pmd.sourceforge.io/ruleset_2_0_0.xsd">
+
+    <description>PMD ECMAScript kurallarını GitHub'dan çeken ruleset</description>
+
+    <rule ref="https://raw.githubusercontent.com/pmd/pmd/main/pmd-javascript/src/main/resources/category/ecmascript/bestpractices.xml"/>
+    <rule ref="https://raw.githubusercontent.com/pmd/pmd/main/pmd-javascript/src/main/resources/category/ecmascript/codestyle.xml"/>
+    <rule ref="https://raw.githubusercontent.com/pmd/pmd/main/pmd-javascript/src/main/resources/category/ecmascript/design.xml"/>
+    <rule ref="https://raw.githubusercontent.com/pmd/pmd/main/pmd-javascript/src/main/resources/category/ecmascript/errorprone.xml"/>
+    <rule ref="https://raw.githubusercontent.com/pmd/pmd/main/pmd-javascript/src/main/resources/category/ecmascript/security.xml"/>
+</ruleset>

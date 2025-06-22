@@ -1,0 +1,8 @@
+vulnervenv
+__pycache__
+node_modules
+dist
+pmd.zip
+*.deb
+*.pyc
+test.report

@@ -1,0 +1,821 @@
+.trivy-content {
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-header {
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.section-header h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #1a202c;
+  margin: 0 0 8px 0;
+  background: linear-gradient(90deg, #1976D2, #64B5F6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.header-description {
+  font-size: 1rem;
+  color: #4a5568;
+  margin: 0;
+  font-weight: 400;
+}
+
+.input-section {
+  background: white;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 24px;
+}
+
+.input-method-selector {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.input-field input {
+  padding: 8px 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.file-drop-area {
+  border: 2px dashed #e2e8f0;
+  border-radius: 8px;
+  padding: 24px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.scan-button {
+  background: #1976D2;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+}
+
+.scan-button:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: #dc2626;
+  margin-top: 8px;
+  padding: 8px;
+  background: #fee2e2;
+  border-radius: 4px;
+}
+
+.results-section {
+  background: white;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.vulnerabilities-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.vulnerability-item {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.vuln-header {
+  padding: 12px;
+  background: #f8fafc;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.severity-badge {
+  padding: 4px 8px;
+  border-radius: 4px;
+  color: white;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.vuln-id {
+  font-family: monospace;
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+.vuln-details {
+  padding: 16px;
+}
+
+.vuln-details h4 {
+  margin: 0 0 12px 0;
+  color: #1a202c;
+}
+
+.vuln-details p {
+  margin: 8px 0;
+  color: #4a5568;
+}
+
+.vuln-description {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.input-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.input-method-selector {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.radio-option input[type="radio"] {
+  cursor: pointer;
+}
+
+.radio-option label {
+  cursor: pointer;
+}
+
+.scan-results-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.scan-result-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.scan-header {
+  padding: 16px;
+  background: #f8fafc;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.scan-header h3 {
+  margin: 0;
+  color: #1a202c;
+  font-size: 1.25rem;
+}
+
+.scan-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.scan-status.scanning {
+  color: #1976D2;
+}
+
+.scan-status.completed {
+  color: #2e7d32;
+}
+
+.scan-status.error {
+  color: #dc2626;
+}
+
+.scan-progress {
+  padding: 24px;
+  text-align: center;
+  color: #4a5568;
+}
+
+.scan-error {
+  padding: 16px;
+  color: #dc2626;
+  background: #fee2e2;
+}
+
+.vulnerabilities-summary {
+  padding: 16px;
+}
+
+.vuln-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+  padding: 12px;
+  background: #f8fafc;
+  border-radius: 6px;
+}
+
+.severity-stat {
+  padding: 4px 12px;
+  border-radius: 4px;
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.trivy-page {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.scan-input-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.input-toggle {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.input-toggle button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.input-toggle button.active {
+  background: #1976D2;
+  color: white;
+  border-color: #1976D2;
+}
+
+.image-input {
+  margin-bottom: 1.5rem;
+}
+
+.image-input input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.dropzone {
+  border: 2px dashed #e2e8f0;
+  border-radius: 6px;
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.dropzone.active {
+  border-color: #1976D2;
+  background: #f0f7ff;
+}
+
+.selected-files {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background: #f8fafc;
+  border-radius: 4px;
+}
+
+.scan-button {
+  background: #1976D2;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.2s;
+}
+
+.scan-button:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+}
+
+.scan-results-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.scan-result-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.scan-header {
+  padding: 1rem;
+  background: #f8fafc;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.scan-header h3 {
+  margin: 0;
+  color: #1a202c;
+}
+
+.scan-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.scan-status.scanning { color: #1976D2; }
+.scan-status.completed { color: #2e7d32; }
+.scan-status.error { color: #d32f2f; }
+
+.scan-progress {
+  padding: 2rem;
+  text-align: center;
+  color: #64748b;
+}
+
+.scan-error {
+  padding: 1rem;
+  color: #d32f2f;
+  background: #ffebee;
+}
+
+.vulnerabilities-summary {
+  padding: 1rem;
+}
+
+.vuln-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.severity-stat {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spin {
+  display: inline-block;
+  animation: spin 1s linear infinite;
+}
+
+.view-json-button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  transition: background-color 0.2s;
+}
+
+.view-json-button:hover {
+  background-color: #1d4ed8;
+}
+
+.json-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 800px;
+  max-height: 80vh;
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  outline: none;
+}
+
+.json-modal h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #1f2937;
+}
+
+.json-modal pre {
+  background-color: #f3f4f6;
+  padding: 1rem;
+  border-radius: 0.375rem;
+  overflow: auto;
+  max-height: calc(80vh - 8rem);
+  font-family: monospace;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.json-modal button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #6b7280;
+  color: white;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: background-color 0.2s;
+}
+
+.json-modal button:hover {
+  background-color: #4b5563;
+} 
+
+.page-title {
+  color: #00796b;
+  margin-bottom: 2rem;
+}
+
+.ai-analysis {
+  margin: 2rem 0 1.5rem 0;
+  padding: 1.5rem 1.5rem 1.5rem 2rem;
+  background: #f8fafc;
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.06);
+}
+
+.ai-analysis h3 {
+  margin: 0 0 1rem 0;
+  color: #1976D2;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ai-content {
+  white-space: pre-wrap;
+  font-size: 1.08rem;
+  line-height: 1.7;
+  color: #334155;
+  background: #fff;
+  padding: 1.25rem 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(25, 118, 210, 0.04);
+  margin-top: 0.5rem;
+}
+
+/* Markdown Styles */
+.ai-content h1 {
+  font-size: 1.8em;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  color: #1e293b;
+}
+
+.ai-content h2 {
+  font-size: 1.5em;
+  margin-top: 0.8em;
+  margin-bottom: 0.4em;
+  color: #1e293b;
+}
+
+.ai-content h3 {
+  font-size: 1.3em;
+  margin-top: 0.6em;
+  margin-bottom: 0.3em;
+  color: #1e293b;
+}
+
+.ai-content p {
+  margin: 0.8em 0;
+}
+
+.ai-content ul, .ai-content ol {
+  margin: 0.8em 0;
+  padding-left: 1.5em;
+}
+
+.ai-content li {
+  margin: 0.3em 0;
+}
+
+.ai-content code {
+  background: #f1f5f9;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 0.9em;
+  color: #1e293b;
+}
+
+.ai-content pre {
+  background: #1e293b;
+  color: #e2e8f0;
+  padding: 1em;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 1em 0;
+}
+
+.ai-content pre code {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+  border-radius: 0;
+}
+
+.ai-content blockquote {
+  border-left: 4px solid #1976D2;
+  margin: 1em 0;
+  padding: 0.5em 1em;
+  background: #f8fafc;
+  color: #475569;
+}
+
+.ai-content table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1em 0;
+}
+
+.ai-content th, .ai-content td {
+  border: 1px solid #e2e8f0;
+  padding: 0.5em;
+  text-align: left;
+}
+
+.ai-content th {
+  background: #f8fafc;
+  font-weight: 600;
+}
+
+.ai-content a {
+  color: #1976D2;
+  text-decoration: none;
+}
+
+.ai-content a:hover {
+  text-decoration: underline;
+}
+
+.ai-content hr {
+  border: none;
+  border-top: 1px solid #e2e8f0;
+  margin: 1.5em 0;
+}
+
+.ai-content span[style*="color:#dc2626"] { color: #dc2626 !important; font-weight: bold; }
+.ai-content span[style*="color:#ea580c"] { color: #ea580c !important; font-weight: bold; }
+.ai-content span[style*="color:#d97706"] { color: #d97706 !important; font-weight: bold; }
+.ai-content span[style*="color:#65a30d"] { color: #65a30d !important; font-weight: bold; }
+
+.vulnerabilities-summary {
+  padding: 1.5rem;
+  background: white;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.vuln-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.severity-stat {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.vulnerability-details {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  background: #f8fafc;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+.vulnerability-item {
+  background: white;
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.vuln-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.vuln-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.vuln-description {
+  color: #475569;
+  line-height: 1.6;
+  margin: 1rem 0;
+  padding: 1rem;
+  background: #f8fafc;
+  border-radius: 6px;
+  border-left: 4px solid #1976D2;
+}
+
+.vuln-meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.vuln-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.vuln-meta-label {
+  font-size: 0.875rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.vuln-meta-value {
+  font-size: 1rem;
+  color: #1e293b;
+  font-weight: 500;
+}
+
+.severity-critical {
+  background-color: #dc2626;
+}
+
+.severity-high {
+  background-color: #ea580c;
+}
+
+.severity-medium {
+  background-color: #d97706;
+}
+
+.severity-low {
+  background-color: #65a30d;
+}
+
+.severity-unknown {
+  background-color: #6b7280;
+}
+
+.json-modal {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+.json-modal pre {
+  background: #1e293b;
+  color: #e2e8f0;
+  padding: 1.5rem;
+  border-radius: 8px;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  overflow-x: auto;
+}
+
+@media (max-width: 768px) {
+  .vuln-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .vuln-meta {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-analysis, .ai-content {
+    padding: 1rem;
+    font-size: 0.97rem;
+  }
+
+  .ai-content h3, .ai-content h4 {
+    font-size: 1.05em;
+  }
+}
+
+.ai-analysis-loading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  margin: 10px 0;
+}
+
+.ai-analysis-loading span {
+  color: #666;
+  font-size: 14px;
+}
+
